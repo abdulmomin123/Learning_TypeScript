@@ -1,5 +1,8 @@
+// type infersion
 var person = {
-    name: 'mm',
-    age: 18
+    name: 'momin',
+    age: 18,
+    hobbies: ['none', 'none!']
 };
-console.log(person.age);
+person.hobbies[0] = 'gaming';
+console.log(person.hobbies[0]);

@@ -1,31 +1,10 @@
-// JS version
-const product = {
-  id: 'abc1',
-  price: 12.99,
-  tags: ['great-offer', 'hot-and-new'],
-  details: {
-    title: 'Red Carpet',
-    description: 'A great carpet - almost brand-new!',
-  },
+// type infersion
+const person = {
+  name: 'momin',
+  age: 18,
+  hobbies: ['none', 'none!'],
 };
 
-// TS version
-const productTS: {
-  id: string;
-  price: number;
-  tags: [string, string];
-  details: {
-    title: string;
-    description: string;
-  };
-} = {
-  id: 'abc1',
-  price: 12.99,
-  tags: ['great-offer', 'hot-and-new'],
-  details: {
-    title: 'Red Carpet',
-    description: 'A great carpet - almost brand-new!',
-  },
-};
+person.hobbies.push(22);
 
-console.log(productTS);
+console.log(person.hobbies[0]);
