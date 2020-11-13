@@ -5,6 +5,6 @@ const person = {
   hobbies: ['none', 'none!'],
 };
 
-person.hobbies.push(22);
+person.hobbies.push('22');
 
 console.log(person.hobbies[0]);
