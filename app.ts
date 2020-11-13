@@ -1,10 +1,9 @@
-function add(n1: number | string, n2: number | string) {
+function add(n1: number, n2: number) {
   const result = n1 + n2;
 
   return result;
 }
 
-const r1 = add('a', 'b');
 const r2 = add(2, 2);
 
-console.log(r1, r2);
+console.log(r2);
