@@ -1,0 +1,19 @@
+{
+  "name": "learning-typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdulmomin123/Learning_TypeScript.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdulmomin123/Learning_TypeScript/issues"
+  },
+  "homepage": "https://github.com/abdulmomin123/Learning_TypeScript#readme"
+}
