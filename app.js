@@ -4,5 +4,5 @@ var person = {
     age: 18,
     hobbies: ['none', 'none!']
 };
-person.hobbies[0] = 'gaming';
+person.hobbies.push('22');
 console.log(person.hobbies[0]);
