@@ -1,16 +1,7 @@
-var Roll;
-(function (Roll) {
-    Roll[Roll["ADMIN"] = 0] = "ADMIN";
-    Roll[Roll["READER"] = 1] = "READER";
-    Roll[Roll["AUTHOR"] = 2] = "AUTHOR";
-})(Roll || (Roll = {}));
-// type infersion
-var person = {
-    name: 'momin',
-    age: 18,
-    hobbies: ['none', 'none!'],
-    role: [Roll.ADMIN, Roll[0]]
-};
-// person.role.push(22);
-// person.role[0] = 22;
-console.log(Roll);
+function add(n1, n2) {
+    var result = n1 + n2;
+    return result;
+}
+var r1 = add('a', 'b');
+var r2 = add(2, 2);
+console.log(r1, r2);

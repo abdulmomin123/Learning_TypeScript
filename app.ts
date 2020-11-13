@@ -1,18 +1,10 @@
-enum Roll {
-  ADMIN,
-  READER,
-  AUTHOR,
+function add(n1: number | string, n2: number | string) {
+  const result = n1 + n2;
+
+  return result;
 }
 
-// type infersion
-const person = {
-  name: 'momin',
-  age: 18,
-  hobbies: ['none', 'none!'],
-  role: [Roll.ADMIN, Roll[0]],
-};
+const r1 = add('a', 'b');
+const r2 = add(2, 2);
 
-// person.role.push(22);
-// person.role[0] = 22;
-
-console.log(Roll);
+console.log(r1, r2);
