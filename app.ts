@@ -1,24 +1,31 @@
-// manual declaration
-const person: {
-  name: string;
-  age: number;
-  address: {
-    area: string;
-    homeNo: number;
-  };
-} = {
-  name: 'momin',
-  age: 18,
-  address: {
-    area: 'city',
-    homeNo: 20,
+// JS version
+const product = {
+  id: 'abc1',
+  price: 12.99,
+  tags: ['great-offer', 'hot-and-new'],
+  details: {
+    title: 'Red Carpet',
+    description: 'A great carpet - almost brand-new!',
   },
 };
 
-// type infersion
-const person2 = {
-  name: 'momin',
-  age: 18,
+// TS version
+const productTS: {
+  id: string;
+  price: number;
+  tags: [string, string];
+  details: {
+    title: string;
+    description: string;
+  };
+} = {
+  id: 'abc1',
+  price: 12.99,
+  tags: ['great-offer', 'hot-and-new'],
+  details: {
+    title: 'Red Carpet',
+    description: 'A great carpet - almost brand-new!',
+  },
 };
 
-console.log(person.age);
+console.log(productTS);
