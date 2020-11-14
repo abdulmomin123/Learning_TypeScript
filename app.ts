@@ -1,8 +1,8 @@
-function add(
-  n1: number | string,
-  n2: number | string,
-  outputAs: 'asNumber' | 'asString'
-) {
+// Custom types
+type StrOrNum = number | string;
+type OutputType = 'asString' | 'asNumber';
+
+function add(n1: StrOrNum, n2: StrOrNum, outputAs: OutputType) {
   let result: number | string;
 
   if (outputAs === 'asNumber') {
