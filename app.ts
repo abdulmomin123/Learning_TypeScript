@@ -1,9 +1,9 @@
-type FnParam = number;
+function greet(name: string, callback: (name: string) => void): void {
+  const userName = name;
 
-const add: (n1: number, n2: number) => number = (n1, n2) => {
-  return n1 + n2;
-};
+  callback(userName);
+}
 
-const result = add(2, 2);
-
-console.log(result);
+greet('momin', name => {
+  console.log('helloo' + name);
+});
