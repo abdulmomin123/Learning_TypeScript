@@ -1,9 +1,6 @@
-var obj = {
+var mixedArr = ['22', 'hi', 'hi'];
+var person = {
     name: 'momin',
     age: 18,
-    address: {
-        areaCode: 22,
-        homeNo: 10
-    }
+    role: [0, 'admin']
 };
-console.log(obj);

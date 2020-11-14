@@ -1,17 +1,7 @@
-const obj: {
-  name: string;
-  age: number;
-  address: {
-    areaCode: number;
-    homeNo: number;
-  };
-} = {
+const mixedArr: (number | string)[] = ['22', 'hi', 'hi'];
+
+const person = {
   name: 'momin',
   age: 18,
-  address: {
-    areaCode: 22,
-    homeNo: 10,
-  },
+  role: [0, 'admin'],
 };
-
-console.log(obj);
