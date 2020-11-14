@@ -1,5 +1,9 @@
-function add(n1: number | string, n2: number | string, outputAs: string) {
-  let result;
+function add(
+  n1: number | string,
+  n2: number | string,
+  outputAs: 'asNumber' | 'asString'
+) {
+  let result: number | string;
 
   if (outputAs === 'asNumber') {
     result = +n1 + +n2;
