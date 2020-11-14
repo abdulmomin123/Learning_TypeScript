@@ -1,9 +1,5 @@
-function greet(name: string, callback: (name: string) => void): void {
-  const userName = name;
+const button = document.querySelector('button')!;
 
-  callback(userName);
-}
-
-greet('momin', name => {
-  console.log('helloo' + name);
+button.addEventListener('click', e => {
+  console.log('hi');
 });
