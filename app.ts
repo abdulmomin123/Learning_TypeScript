@@ -1,8 +1,8 @@
 const mixedArr: (number | string)[] = ['22', 'hi', 'hi'];
 
 enum Role {
-  ADMIN,
-  READER,
+  ADMIN = 10,
+  READER = 0,
   AUTHOR,
 }
 
@@ -12,4 +12,4 @@ const person = {
   role: [Role.ADMIN],
 };
 
-console.log(person);
+console.log(Role);
