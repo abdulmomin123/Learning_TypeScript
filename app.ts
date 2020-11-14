@@ -1,5 +1,4 @@
-function generateError(message: string, code: number) {
-  throw { message, code };
-}
+const h1 = 'hi';
 
-console.log(generateError('File not found', 404));
+const num = 11;
+const tf = true;
