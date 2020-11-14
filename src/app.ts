@@ -9,7 +9,7 @@ class BookStore {
     this.stock = stock;
   }
 
-  getAll() {
+  getAllBooks() {
     this.books.forEach(book => console.log(book));
   }
 
@@ -21,3 +21,7 @@ class BookStore {
     console.log(this.stock);
   }
 }
+
+const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
+
+console.log(mainStore);

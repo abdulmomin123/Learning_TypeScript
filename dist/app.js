@@ -5,7 +5,7 @@ class BookStore {
         this.categories = categories;
         this.stock = stock;
     }
-    getAll() {
+    getAllBooks() {
         this.books.forEach(book => console.log(book));
     }
     getCategories() {
@@ -15,4 +15,6 @@ class BookStore {
         console.log(this.stock);
     }
 }
+const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
+console.log(mainStore);
 //# sourceMappingURL=app.js.map
