@@ -1,11 +1,23 @@
-class Book {
-  type: string;
-  name: string;
-  genre: string;
+class BookStore {
+  books: string[];
+  categories: string[];
+  stock: number;
 
-  constructor(type: string, name: string, genre: string) {
-    this.type = type;
-    this.name = name;
-    this.genre = genre;
+  constructor(books: string[], categories: string[], stock: number) {
+    this.books = books;
+    this.categories = categories;
+    this.stock = stock;
+  }
+
+  getAll() {
+    this.books.forEach(book => console.log(book));
+  }
+
+  getCategories() {
+    this.categories.forEach(category => console.log(category));
+  }
+
+  getStock() {
+    console.log(this.stock);
   }
 }
