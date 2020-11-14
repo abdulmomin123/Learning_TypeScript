@@ -24,4 +24,4 @@ class BookStore {
 
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
 
-console.log(mainStore.stock);
+console.log(mainStore.getStock());
