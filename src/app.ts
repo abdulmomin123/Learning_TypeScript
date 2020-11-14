@@ -1,7 +1,7 @@
 class BookStore {
-  books: string[];
-  categories: string[];
-  stock: number;
+  private books: string[];
+  private categories: string[];
+  private stock: number;
 
   constructor(books: string[], categories: string[], stock: number) {
     this.books = books;
@@ -24,4 +24,4 @@ class BookStore {
 
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
 
-console.log(mainStore);
+console.log(mainStore.stock);
