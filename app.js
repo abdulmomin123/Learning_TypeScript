@@ -1,7 +1,7 @@
 // Function return types & void
-function add(n1, n2) {
+var add = function (n1, n2) {
     return n1 + n2;
-}
+};
 // void type
 function greet(name) {
     console.log(name);
