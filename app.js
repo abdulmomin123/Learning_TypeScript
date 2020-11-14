@@ -1,9 +1,5 @@
-// Function return types & void
-var add = function (n1, n2, cb) {
-    var result = n1 + n2;
-    cb(result);
-};
-var r1 = add(2, 2, function (result) {
-    console.log(result);
-});
-// console.log(r1);
+var userInput;
+var userName;
+userInput = 'hi';
+userInput = 22;
+console.log(userInput);
