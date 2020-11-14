@@ -19,6 +19,5 @@ class BookStore {
     }
 }
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
-mainStore.updateStock(100);
-console.log(mainStore.getStock());
+console.log(mainStore);
 //# sourceMappingURL=app.js.map

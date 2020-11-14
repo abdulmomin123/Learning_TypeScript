@@ -1,6 +1,6 @@
 class BookStore {
   constructor(
-    private books: string[],
+    private readonly books: string[],
     private categories: string[],
     private stock: number
   ) {}
@@ -24,6 +24,4 @@ class BookStore {
 
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
 
-mainStore.updateStock(100);
-
-console.log(mainStore.getStock());
+console.log(mainStore);
