@@ -1,13 +1,6 @@
-function add(n1, n2, outputAs) {
-    var result;
-    if (outputAs === 'asNumber') {
-        result = +n1 + +n2;
-    }
-    else {
-        result = n1.toString() + n2.toString();
-    }
-    return result;
+// Function return types & void
+function add(n1, n2) {
+    return n1 + n2;
 }
-var r1 = add(2, 2, 'asNumber');
-var r2 = add('2', '2', 'asString');
-console.log(r1, r2);
+var r1 = add(2, 2);
+console.log(r1);

@@ -1,20 +1,8 @@
-// Custom types
-type StrOrNum = number | string;
-type OutputType = 'asString' | 'asNumber';
-
-function add(n1: StrOrNum, n2: StrOrNum, outputAs: OutputType) {
-  let result: number | string;
-
-  if (outputAs === 'asNumber') {
-    result = +n1 + +n2;
-  } else {
-    result = n1.toString() + n2.toString();
-  }
-
-  return result;
+// Function return types & void
+function add(n1: number, n2: number) {
+  return n1 + n2;
 }
 
-const r1 = add(2, 2, 'asNumber');
-const r2 = add('2', '2', 'asString');
+const r1 = add(2, 2);
 
-console.log(r1, r2);
+console.log(r1);
