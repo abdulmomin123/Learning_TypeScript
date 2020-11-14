@@ -1,15 +1,12 @@
 // Function return types & void
-const add: (a: number, b: number) => number = (n1, n2) => {
-  return n1 + n2;
+const add = (n1: number, n2: number, cb: (a: number) => void) => {
+  const result = n1 + n2;
+
+  cb(result);
 };
 
-// void type
-function greet(name: string): void {
-  console.log(name);
-}
+const r1 = add(2, 2, result => {
+  console.log(result);
+});
 
-greet('momin');
-
-const r1 = add(2, 2);
-
-console.log(r1);
+// console.log(r1);

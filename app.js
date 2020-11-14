@@ -1,11 +1,9 @@
 // Function return types & void
-var add = function (n1, n2) {
-    return n1 + n2;
+var add = function (n1, n2, cb) {
+    var result = n1 + n2;
+    cb(result);
 };
-// void type
-function greet(name) {
-    console.log(name);
-}
-greet('momin');
-var r1 = add(2, 2);
-console.log(r1);
+var r1 = add(2, 2, function (result) {
+    console.log(result);
+});
+// console.log(r1);
