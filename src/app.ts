@@ -22,6 +22,24 @@ class BookStore {
   }
 }
 
+class ComicBookStore extends BookStore {
+  constructor(
+    books: string[],
+    categories: string[],
+    stock: number,
+    public genre: string
+  ) {
+    super(books, categories, stock);
+  }
+}
+
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
 
-console.log(mainStore);
+const comicStore = new ComicBookStore(
+  ['a', 'b', 'c'],
+  ['bla', 'bla', 'bla'],
+  3,
+  'comic'
+);
+
+console.log(comicStore);

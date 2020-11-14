@@ -18,6 +18,13 @@ class BookStore {
         this.stock = value;
     }
 }
+class ComicBookStore extends BookStore {
+    constructor(books, categories, stock, genre) {
+        super(books, categories, stock);
+        this.genre = genre;
+    }
+}
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
-console.log(mainStore);
+const comicStore = new ComicBookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3, 'comic');
+console.log(comicStore);
 //# sourceMappingURL=app.js.map
