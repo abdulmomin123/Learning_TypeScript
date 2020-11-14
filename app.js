@@ -1,3 +1,4 @@
+"use strict";
 function greet(name, callback) {
     var userName = name;
     callback(userName);
