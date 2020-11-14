@@ -1,9 +1,5 @@
-function add(w1, w2, outputAs) {
-    if (outputAs === 'return') {
-        return w1 + w2;
-    }
-    else {
-        console.log(w1 + w2);
-    }
-}
-add('type', 'script', 'save');
+var add = function (n1, n2) {
+    return n1 + n2;
+};
+var result = add(2, 2);
+console.log(result);

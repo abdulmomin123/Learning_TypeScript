@@ -1,11 +1,9 @@
-type outputOptions = 'return' | 'save';
+type FnParam = number;
 
-function add(w1: string, w2: string, outputAs: outputOptions) {
-  if (outputAs === 'return') {
-    return w1 + w2;
-  } else {
-    console.log(w1 + w2);
-  }
-}
+const add: (n1: number, n2: number) => number = (n1, n2) => {
+  return n1 + n2;
+};
 
-add('type', 'script', 'save');
+const result = add(2, 2);
+
+console.log(result);
