@@ -1,5 +1,4 @@
-var userInput;
-var userName;
-userInput = 'hi';
-userInput = 22;
-console.log(userInput);
+function generateError(message, code) {
+    throw { message: message, code: code };
+}
+console.log(generateError('File not found', 404));

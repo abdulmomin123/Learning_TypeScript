@@ -1,7 +1,5 @@
-let userInput: unknown;
-let userName: string;
+function generateError(message: string, code: number) {
+  throw { message, code };
+}
 
-userInput = 'hi';
-userInput = 22;
-
-console.log(userInput);
+console.log(generateError('File not found', 404));
