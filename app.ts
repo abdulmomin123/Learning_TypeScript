@@ -1,4 +1,17 @@
-const h1 = 'hi';
+const obj: {
+  name: string;
+  age: number;
+  address: {
+    areaCode: number;
+    homeNo: number;
+  };
+} = {
+  name: 'momin',
+  age: 18,
+  address: {
+    areaCode: 22,
+    homeNo: 10,
+  },
+};
 
-const num = 11;
-const tf = true;
+console.log(obj);
