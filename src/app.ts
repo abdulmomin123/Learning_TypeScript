@@ -1,13 +1,9 @@
 class BookStore {
-  private books: string[];
-  private categories: string[];
-  private stock: number;
-
-  constructor(books: string[], categories: string[], stock: number) {
-    this.books = books;
-    this.categories = categories;
-    this.stock = stock;
-  }
+  constructor(
+    private books: string[],
+    private categories: string[],
+    private stock: number
+  ) {}
 
   getAllBooks() {
     this.books.forEach(book => console.log(book));
