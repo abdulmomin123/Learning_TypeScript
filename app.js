@@ -4,7 +4,7 @@ function add(n1, n2) {
 }
 // void type
 function greet(name) {
-    return name;
+    console.log(name);
 }
 greet('momin');
 var r1 = add(2, 2);

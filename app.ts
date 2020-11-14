@@ -4,8 +4,8 @@ function add(n1: number, n2: number) {
 }
 
 // void type
-function greet(name: string) {
-  return name;
+function greet(name: string): void {
+  console.log(name);
 }
 
 greet('momin');
