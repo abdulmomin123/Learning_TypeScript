@@ -1,5 +1,5 @@
 // Function return types & void
-const add: Function = (n1: number, n2: number) => {
+const add: (n1: number, n2: number) => number = (n1, n2) => {
   return n1 + n2;
 };
 
