@@ -6,4 +6,6 @@ class Pets {
         this.isBad = isBad;
     }
 }
+let myPets;
+myPets = [{ name: 'monty', age: 2, isBad: false }];
 //# sourceMappingURL=app.js.map

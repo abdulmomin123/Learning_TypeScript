@@ -9,3 +9,7 @@ class Pets implements Pet {
     //
   }
 }
+
+let myPets: Pet[];
+
+myPets = [{ name: 'monty', age: 2, isBad: false }];
