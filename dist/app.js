@@ -12,7 +12,7 @@ class BookStore {
         this.categories.forEach(category => console.log(category));
     }
     getStock() {
-        console.log(this.stock);
+        console.log(`${this.stock}`);
     }
     updateStock(value) {
         this.stock = value;
@@ -23,7 +23,12 @@ class ComicBookStore extends BookStore {
         super(books, categories, stock);
         this.genre = genre;
     }
+    getStock() {
+        console.log(`the stock is ${this.stock}`);
+    }
 }
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
 const comicStore = new ComicBookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3, 'comic');
+mainStore.getStock();
+comicStore.getStock();
 //# sourceMappingURL=app.js.map

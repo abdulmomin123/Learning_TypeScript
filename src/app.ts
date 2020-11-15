@@ -1,8 +1,8 @@
 class BookStore {
   constructor(
-    private readonly books: string[],
-    private categories: string[],
-    private stock: number
+    protected readonly books: string[],
+    protected categories: string[],
+    protected stock: number
   ) {}
 
   getAllBooks() {
@@ -14,7 +14,7 @@ class BookStore {
   }
 
   getStock() {
-    console.log(this.stock);
+    console.log(`${this.stock}`);
   }
 
   updateStock(value: number) {
@@ -31,6 +31,10 @@ class ComicBookStore extends BookStore {
   ) {
     super(books, categories, stock);
   }
+
+  getStock() {
+    console.log(`the stock is ${this.stock}`);
+  }
 }
 
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
@@ -41,3 +45,6 @@ const comicStore = new ComicBookStore(
   3,
   'comic'
 );
+
+mainStore.getStock();
+comicStore.getStock();
