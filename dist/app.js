@@ -1,10 +1,8 @@
 "use strict";
-function add(n1, n2) {
-    if (typeof n1 === 'number' && typeof n2 === 'number')
-        return n1 + n2;
-    return n1.toString() + n2.toString();
-}
-const num = add(2, 2);
-const str = add('2', '2');
-console.log(num, str);
+const person = {
+    name: 'momin',
+    age: 18,
+    gender: 'male',
+};
+console.log(person === null || person === void 0 ? void 0 : person.gender);
 //# sourceMappingURL=app.js.map
