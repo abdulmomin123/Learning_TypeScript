@@ -11,4 +11,12 @@ class ClassRoom {
         console.log(this.teacher);
     }
 }
+const classTwelve = new ClassRoom([
+    {
+        school: 'Al-Hera',
+        currentClass: 12,
+        roll: 53,
+        ranking: 'low',
+    },
+], { name: 'Usman Gani', education: 'Honors', age: 50 });
 //# sourceMappingURL=app.js.map
