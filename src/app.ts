@@ -41,5 +41,3 @@ const comicStore = new ComicBookStore(
   3,
   'comic'
 );
-
-console.log(comicStore);
