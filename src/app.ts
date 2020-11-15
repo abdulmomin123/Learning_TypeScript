@@ -45,3 +45,6 @@ const comicStore = new ComicBookStore(
   3,
   'comic'
 );
+mainStore.setStock = 11;
+
+console.log(mainStore.getStock);

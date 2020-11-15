@@ -29,4 +29,6 @@ class ComicBookStore extends BookStore {
 }
 const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
 const comicStore = new ComicBookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3, 'comic');
+mainStore.setStock = 11;
+console.log(mainStore.getStock);
 //# sourceMappingURL=app.js.map
