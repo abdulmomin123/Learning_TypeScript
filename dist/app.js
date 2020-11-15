@@ -1,8 +1,7 @@
 "use strict";
-const newErr = {
-    id: '12',
-    404: 'file not found',
-    403: 'permission denied',
-};
-console.log(newErr);
+function add(n1, n2) {
+    if (typeof n1 === 'number' && typeof n2 === 'number')
+        return n1 + n2;
+    return n1.toString() + ' ' + n2.toString();
+}
 //# sourceMappingURL=app.js.map
