@@ -1,5 +1,10 @@
 type Combinable = string | number;
 
+// function overload
+function add(n1: number, n2: number): number;
+function add(n1: string, n2: string): string;
+function add(n1: number, n2: string): string;
+function add(n1: string, n2: number): string;
 function add(n1: Combinable, n2: Combinable) {
   if (typeof n1 === 'number' && typeof n2 === 'number') return n1 + n2;
 
@@ -7,6 +12,6 @@ function add(n1: Combinable, n2: Combinable) {
 }
 
 const num = add(2, 2);
-const str = add(2, '2');
+const str = add('2', '2');
 
 console.log(num, str);
