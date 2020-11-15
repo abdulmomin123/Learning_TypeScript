@@ -1,5 +1,8 @@
 "use strict";
-const addition = (n1, n2) => n1 + n2;
-const res = addition(2, 2);
-console.log(res);
+const me = {
+    name: 'momin',
+    permissions: ['admin'],
+    startDate: new Date(),
+};
+console.log(me);
 //# sourceMappingURL=app.js.map

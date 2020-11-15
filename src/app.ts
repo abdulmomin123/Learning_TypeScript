@@ -1,9 +1,19 @@
-interface add {
-  (n1: number, n2: number): number;
-}
+type Admin = {
+  name: string;
+  permissions: string[];
+};
 
-const addition: add = (n1, n2) => n1 + n2;
+type Employee = {
+  name: string;
+  startDate: Date;
+};
 
-const res = addition(2, 2);
+type ElevatedEmployee = Admin & Employee;
 
-console.log(res);
+const me: ElevatedEmployee = {
+  name: 'momin',
+  permissions: ['admin'],
+  startDate: new Date(),
+};
+
+console.log(me);
