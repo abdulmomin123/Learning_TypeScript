@@ -1,50 +1,11 @@
-class BookStore {
-  constructor(
-    protected readonly books: string[],
-    protected categories: string[],
-    protected stock: number
-  ) {}
+type Person = {
+  name: string;
+  age: number;
+};
 
-  getAllBooks() {
-    this.books.forEach(book => console.log(book));
-  }
+const me: Person = {
+  name: 'momin',
+  age: 18,
+};
 
-  getCategories() {
-    this.categories.forEach(category => console.log(category));
-  }
-
-  updateStock(value: number) {
-    this.stock = value;
-  }
-
-  get getStock() {
-    return this.stock;
-  }
-
-  set setStock(value: number) {
-    this.stock = value;
-  }
-}
-
-class ComicBookStore extends BookStore {
-  constructor(
-    books: string[],
-    categories: string[],
-    stock: number,
-    public genre: string
-  ) {
-    super(books, categories, stock);
-  }
-}
-
-const mainStore = new BookStore(['a', 'b', 'c'], ['bla', 'bla', 'bla'], 3);
-
-const comicStore = new ComicBookStore(
-  ['a', 'b', 'c'],
-  ['bla', 'bla', 'bla'],
-  3,
-  'comic'
-);
-mainStore.setStock = 11;
-
-console.log(mainStore.getStock);
+console.log(me);
