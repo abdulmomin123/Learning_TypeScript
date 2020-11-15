@@ -8,7 +8,7 @@ type Employee = {
   startDate: Date;
 };
 
-type ElevatedEmployee = Admin & Employee;
+interface ElevatedEmployee extends Admin, Employee {}
 
 const me: ElevatedEmployee = {
   name: 'momin',
