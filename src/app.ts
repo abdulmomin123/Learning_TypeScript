@@ -10,10 +10,12 @@ type Employee = {
 
 interface ElevatedEmployee extends Admin, Employee {}
 
-const me: ElevatedEmployee = {
-  name: 'momin',
-  permissions: ['admin'],
-  startDate: new Date(),
-};
+type unknownEmp = Admin | Employee;
 
-console.log(me);
+function printEmp(emp: unknownEmp) {
+  if ('permissions' in emp) {
+    console.log(emp.permissions);
+  }
+}
+
+printEmp({ name: 'momin', permissions: ['admin'] });

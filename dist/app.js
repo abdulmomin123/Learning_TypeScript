@@ -1,8 +1,8 @@
 "use strict";
-const me = {
-    name: 'momin',
-    permissions: ['admin'],
-    startDate: new Date(),
-};
-console.log(me);
+function printEmp(emp) {
+    if ('permissions' in emp) {
+        console.log(emp.permissions);
+    }
+}
+printEmp({ name: 'momin', permissions: ['admin'] });
 //# sourceMappingURL=app.js.map
