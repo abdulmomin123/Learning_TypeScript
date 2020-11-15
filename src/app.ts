@@ -1,14 +1,9 @@
-interface Human {
-  gender: string;
-  age: number;
+interface add {
+  (n1: number, n2: number): number;
 }
 
-interface Man extends Human {
-  job: string;
-}
+const addition: add = (n1, n2) => n1 + n2;
 
-const me: Man = {
-  gender: 'male',
-  age: 18,
-  job: 'programmer',
-};
+const res = addition(2, 2);
+
+console.log(res);
