@@ -1,27 +1,4 @@
-interface Bird {
-  type: 'bird';
-  flyingSpeed: number;
-}
+// const input = <HTMLInputElement>document.querySelector('.input');
+const input = document.querySelector('.input') as HTMLInputElement;
 
-interface Horse {
-  type: 'horse';
-  runningSpeed: number;
-}
-
-type Animal = Bird | Horse;
-
-function moveAnimal(animal: Animal) {
-  let speed: number;
-
-  switch (animal.type) {
-    case 'bird':
-      speed = animal.flyingSpeed;
-      break;
-    case 'horse':
-      speed = animal.runningSpeed;
-  }
-
-  console.log('animal running at ' + speed);
-}
-
-moveAnimal({ type: 'horse', runningSpeed: 33 });
+input.value = 'hi';
