@@ -1,4 +1,12 @@
-// const input = <HTMLInputElement>document.querySelector('.input');
-const input = document.querySelector('.input') as HTMLInputElement;
+interface Errors {
+  id: string;
+  [prop: string]: string;
+}
 
-input.value = 'hi';
+const newErr: Errors = {
+  id: '12',
+  404: 'file not found',
+  403: 'permission denied',
+};
+
+console.log(newErr);
