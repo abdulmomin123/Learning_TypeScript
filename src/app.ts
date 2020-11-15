@@ -1,15 +1,14 @@
-interface Pet {
-  name: string;
+interface Human {
+  gender: string;
   age: number;
-  isBad: boolean;
 }
 
-class Pets implements Pet {
-  constructor(public name: string, public age: number, public isBad: boolean) {
-    //
-  }
+interface Man extends Human {
+  job: string;
 }
 
-let myPets: Pet[];
-
-myPets = [{ name: 'monty', age: 2, isBad: false }];
+const me: Man = {
+  gender: 'male',
+  age: 18,
+  job: 'programmer',
+};
