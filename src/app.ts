@@ -1,21 +1,17 @@
-type Admin = {
-  name: string;
-  permissions: string[];
-};
+interface Bird {
+  flyingSpeed: number;
+}
 
-type Employee = {
-  name: string;
-  startDate: Date;
-};
+interface Horse {
+  runningSpeed: number;
+}
 
-interface ElevatedEmployee extends Admin, Employee {}
+type Animal = Bird | Horse;
 
-type unknownEmp = Admin | Employee;
-
-function printEmp(emp: unknownEmp) {
-  if ('permissions' in emp) {
-    console.log(emp.permissions);
+function moveAnimal(animal: Animal) {
+  if ('flyingSpeed' in animal) {
+    console.log(animal.flyingSpeed);
   }
 }
 
-printEmp({ name: 'momin', permissions: ['admin'] });
+moveAnimal({ flyingSpeed: 33 });

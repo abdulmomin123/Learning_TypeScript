@@ -1,8 +1,8 @@
 "use strict";
-function printEmp(emp) {
-    if ('permissions' in emp) {
-        console.log(emp.permissions);
+function moveAnimal(animal) {
+    if ('flyingSpeed' in animal) {
+        console.log(animal.flyingSpeed);
     }
 }
-printEmp({ name: 'momin', permissions: ['admin'] });
+moveAnimal({ flyingSpeed: 33 });
 //# sourceMappingURL=app.js.map
