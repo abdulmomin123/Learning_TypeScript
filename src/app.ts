@@ -1,17 +1,20 @@
-interface Person {
-  name: string;
-  age: number;
-
-  greet: () => void;
+interface Student {
+  school: string;
+  currentClass: number;
+  roll: number;
+  ranking: string;
 }
 
-const me: Person = {
-  name: 'momin',
-  age: 18,
+class ClassRoom {
+  constructor(private students: Student[], private teacher: string) {
+    //
+  }
 
-  greet() {
-    console.log(`Hi I'm ${this.name} & I'm ${this.age} years old`);
-  },
-};
+  getStudents() {
+    console.log(this.students);
+  }
 
-me.greet();
+  getTeacher() {
+    console.log(this.teacher);
+  }
+}

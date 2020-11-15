@@ -1,10 +1,14 @@
 "use strict";
-const me = {
-    name: 'momin',
-    age: 18,
-    greet() {
-        console.log(`Hi I'm ${this.name} & I'm ${this.age} years old`);
-    },
-};
-me.greet();
+class ClassRoom {
+    constructor(students, teacher) {
+        this.students = students;
+        this.teacher = teacher;
+    }
+    getStudents() {
+        console.log(this.students);
+    }
+    getTeacher() {
+        console.log(this.teacher);
+    }
+}
 //# sourceMappingURL=app.js.map
