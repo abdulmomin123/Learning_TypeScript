@@ -1,11 +1,6 @@
 "use strict";
-function countAndDescribe(element) {
-    let description = 'Got no value';
-    if (element.length) {
-        description = `Got ${element.length} elements`;
-    }
-    return [element, description];
+function printObjProp(obj, key) {
+    console.log(obj[key]);
 }
-const str = countAndDescribe('hi');
-console.log(str);
+printObjProp({ name: 'momin' }, 'name');
 //# sourceMappingURL=app.js.map

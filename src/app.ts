@@ -1,17 +1,5 @@
-interface Lengthy {
-  length: number;
+function printObjProp<T extends object, U extends keyof T>(obj: T, key: U) {
+  console.log(obj[key]);
 }
 
-function countAndDescribe<T extends Lengthy>(element: T) {
-  let description: string = 'Got no value';
-
-  if (element.length) {
-    description = `Got ${element.length} elements`;
-  }
-
-  return [element, description];
-}
-
-const str = countAndDescribe('hi');
-
-console.log(str);
+printObjProp({ name: 'momin' }, 'name');
