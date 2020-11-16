@@ -1,8 +1,9 @@
 "use strict";
-const person = {
-    name: 'momin',
-    age: 18,
-    gender: 'male',
-};
-console.log(person === null || person === void 0 ? void 0 : person.gender);
+const names = ['momin'];
+const timer = new Promise(resolve => {
+    setTimeout(() => {
+        resolve('hi');
+    }, 2000);
+});
+timer.then(data => console.log(data));
 //# sourceMappingURL=app.js.map

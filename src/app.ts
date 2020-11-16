@@ -1,7 +1,9 @@
-const person = {
-  name: 'momin',
-  age: 18,
-  gender: 'male',
-};
+const names: Array<string> = ['momin'];
 
-console.log(person?.gender);
+const timer = new Promise(resolve => {
+  setTimeout(() => {
+    resolve('hi');
+  }, 2000);
+});
+
+timer.then(data => console.log(data));
