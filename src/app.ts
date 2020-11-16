@@ -1,7 +1,13 @@
-function merge<A extends object>(...allObj: A[]): A {
-  return Object.assign({}, ...allObj);
+function countAndDescribe<T extends string | Array<any>>(element: T) {
+  let description: string = 'Got no value';
+
+  if (element.length) {
+    description = `Got ${element.length} elements`;
+  }
+
+  return [element, description];
 }
 
-const info = merge({ name: 'momin' }, { age: 18 });
+const str = countAndDescribe([1, 2, 2, 2]);
 
-console.log(info.name);
+console.log(str);
