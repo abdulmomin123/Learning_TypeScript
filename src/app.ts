@@ -1,9 +1,10 @@
-const names: Array<string> = ['momin'];
+function merge(obj1: object, obj2: object) {
+  return {
+    ...obj1,
+    ...obj2,
+  };
+}
 
-const timer = new Promise(resolve => {
-  setTimeout(() => {
-    resolve('hi');
-  }, 2000);
-});
+const info = merge({ name: 'momin' }, { age: 18 });
 
-timer.then(data => console.log(data));
+console.log(info);
