@@ -13,3 +13,11 @@ class DataStorage<T> {
     return [...this.data];
   }
 }
+
+const textStorage = new DataStorage<string>();
+
+textStorage.addItem('momin');
+textStorage.addItem('mim');
+textStorage.removeItem('mim');
+
+console.log(textStorage.getItems());
