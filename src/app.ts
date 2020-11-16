@@ -13,3 +13,5 @@ function planVideo(title: string, description: string, publishDate: Date) {
 
   return videoBlueprint;
 }
+
+const couples: Readonly<string[]> = ['momin', 'mim'];

@@ -6,4 +6,5 @@ function planVideo(title, description, publishDate) {
     videoBlueprint.publishDate = publishDate;
     return videoBlueprint;
 }
+const couples = ['momin', 'mim'];
 //# sourceMappingURL=app.js.map
