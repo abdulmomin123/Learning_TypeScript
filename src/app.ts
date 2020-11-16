@@ -1,10 +1,9 @@
-function merge<A, B>(obj1: A, obj2: B) {
+function merge<A extends object>(...allObj: A[]) {
   return {
-    ...obj1,
-    ...obj2,
+    ...allObj,
   };
 }
 
 const info = merge({ name: 'momin' }, { age: 18 });
 
-console.log(info.name);
+console.log(info);

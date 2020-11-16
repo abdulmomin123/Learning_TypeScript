@@ -1,7 +1,7 @@
 "use strict";
-function merge(obj1, obj2) {
-    return Object.assign(Object.assign({}, obj1), obj2);
+function merge(...allObj) {
+    return Object.assign({}, allObj);
 }
 const info = merge({ name: 'momin' }, { age: 18 });
-console.log(info.name);
+console.log(info);
 //# sourceMappingURL=app.js.map
