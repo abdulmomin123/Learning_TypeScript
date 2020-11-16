@@ -2,7 +2,7 @@ interface Lengthy {
   length: number;
 }
 
-function countAndDescribe<T extends Lengthy>(element: T): [T, string] {
+function countAndDescribe<T extends Lengthy>(element: T) {
   let description: string = 'Got no value';
 
   if (element.length) {
@@ -12,6 +12,6 @@ function countAndDescribe<T extends Lengthy>(element: T): [T, string] {
   return [element, description];
 }
 
-const str = countAndDescribe('fff');
+const str = countAndDescribe('hi');
 
 console.log(str);
