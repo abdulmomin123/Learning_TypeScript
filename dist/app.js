@@ -6,6 +6,6 @@ function countAndDescribe(element) {
     }
     return [element, description];
 }
-const str = countAndDescribe([1, 2, 2, 2]);
+const str = countAndDescribe('fff');
 console.log(str);
 //# sourceMappingURL=app.js.map

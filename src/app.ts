@@ -1,4 +1,8 @@
-function countAndDescribe<T extends string | Array<any>>(element: T) {
+interface Lengthy {
+  length: number;
+}
+
+function countAndDescribe<T extends Lengthy>(element: T): [T, string] {
   let description: string = 'Got no value';
 
   if (element.length) {
@@ -8,6 +12,6 @@ function countAndDescribe<T extends string | Array<any>>(element: T) {
   return [element, description];
 }
 
-const str = countAndDescribe([1, 2, 2, 2]);
+const str = countAndDescribe('fff');
 
 console.log(str);
