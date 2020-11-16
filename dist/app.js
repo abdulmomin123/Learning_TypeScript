@@ -23,9 +23,5 @@ const numberStorage = new DataStorage();
 numberStorage.addItem(22);
 numberStorage.addItem(23);
 numberStorage.removeItem(23);
-const objectStorage = new DataStorage();
-objectStorage.addItem({ name: 'momin' });
-objectStorage.addItem({ age: 18 });
-objectStorage.removeItem({ name: 'momin' });
 console.log(textStorage.getItems());
 //# sourceMappingURL=app.js.map

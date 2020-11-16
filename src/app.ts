@@ -1,4 +1,4 @@
-class DataStorage<T> {
+class DataStorage<T extends number | string | boolean> {
   private data: T[] = [];
 
   addItem(item: T) {
@@ -28,10 +28,10 @@ numberStorage.addItem(22);
 numberStorage.addItem(23);
 numberStorage.removeItem(23);
 
-const objectStorage = new DataStorage<object>();
+// const objectStorage = new DataStorage<object>();
 
-objectStorage.addItem({ name: 'momin' });
-objectStorage.addItem({ age: 18 });
-objectStorage.removeItem({ name: 'momin' });
+// objectStorage.addItem({ name: 'momin' });
+// objectStorage.addItem({ age: 18 });
+// objectStorage.removeItem({ name: 'momin' });
 
 console.log(textStorage.getItems());
