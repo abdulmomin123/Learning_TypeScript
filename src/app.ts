@@ -1,10 +1,17 @@
 function renderPerson(template: string, selector: string) {
-  return function (_constructor: Function) {
-    const target = document.querySelector(selector)!;
+  return function <T extends { new (...args: any[]): {} }>(
+    initialConstructor: T
+  ) {
+    return class extends initialConstructor {
+      constructor(..._args: any[]) {
+        super();
+        const target = document.querySelector(selector)!;
 
-    if (target) {
-      target.innerHTML = template;
-    }
+        if (target) {
+          target.innerHTML = template;
+        }
+      }
+    };
   };
 }
 

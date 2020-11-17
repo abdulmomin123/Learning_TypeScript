@@ -6,11 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 function renderPerson(template, selector) {
-    return function (_constructor) {
-        const target = document.querySelector(selector);
-        if (target) {
-            target.innerHTML = template;
-        }
+    return function (initialConstructor) {
+        return class extends initialConstructor {
+            constructor(..._args) {
+                super();
+                const target = document.querySelector(selector);
+                if (target) {
+                    target.innerHTML = template;
+                }
+            }
+        };
     };
 }
 let Person = class Person {
