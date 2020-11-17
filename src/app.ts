@@ -1,5 +1,5 @@
-function Log(_target: any, prop: string) {
-  console.log(prop);
+function Log(_target: any, prop: string | Symbol) {
+  console.log(_target, prop);
 }
 
 class Product {
