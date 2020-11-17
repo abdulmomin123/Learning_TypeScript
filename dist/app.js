@@ -5,14 +5,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-function renderPerson(template, selector) {
+function renderPerson(tag, selector) {
     return function (initialConstructor) {
         return class extends initialConstructor {
             constructor(..._args) {
                 super();
                 const target = document.querySelector(selector);
                 if (target) {
-                    target.innerHTML = template;
+                    target.innerHTML = `<${tag}> ${this.name} </${tag}>`;
                 }
             }
         };
@@ -25,6 +25,7 @@ let Person = class Person {
     }
 };
 Person = __decorate([
-    renderPerson('<h1>Momin</h1>', 'div')
+    renderPerson('h1', 'div')
 ], Person);
+const me = new Person('Momin', 18);
 //# sourceMappingURL=app.js.map
