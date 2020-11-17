@@ -1,6 +1,14 @@
+function Log(prop: string) {
+  console.log(prop);
+}
+
 class Product {
-  constructor(public title: string, private _price: number) {
-    //
+  title: string;
+  private _price: number;
+
+  constructor(title: string, price: number) {
+    this.title = title;
+    this._price = price;
   }
 
   set price(val: number) {

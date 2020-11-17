@@ -1,8 +1,11 @@
 "use strict";
+function Log(prop) {
+    console.log(prop);
+}
 class Product {
-    constructor(title, _price) {
+    constructor(title, price) {
         this.title = title;
-        this._price = _price;
+        this._price = price;
     }
     set price(val) {
         if (val > 0)
