@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 function renderPerson(tag, selector) {
     return function (initialConstructor) {
         return class extends initialConstructor {
-            constructor(..._args) {
+            constructor(...args) {
                 super();
                 const target = document.querySelector(selector);
+                console.log(args);
                 if (target) {
                     target.innerHTML = `<${tag}> ${this.name} </${tag}>`;
                 }
@@ -19,13 +20,13 @@ function renderPerson(tag, selector) {
     };
 }
 let Person = class Person {
-    constructor(name, age) {
-        this.name = name;
-        this.age = age;
+    constructor() {
+        this.name = 'momin';
     }
 };
 Person = __decorate([
     renderPerson('h1', 'div')
 ], Person);
-const me = new Person('Momin', 18);
+const me = new Person();
+console.log(me);
 //# sourceMappingURL=app.js.map

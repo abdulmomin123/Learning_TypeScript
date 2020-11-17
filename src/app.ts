@@ -3,10 +3,11 @@ function renderPerson(tag: string, selector: string) {
     initialConstructor: T
   ) {
     return class extends initialConstructor {
-      constructor(..._args: any[]) {
+      constructor(...args: any[]) {
         super();
         const target = document.querySelector(selector)!;
 
+        console.log(args);
         if (target) {
           target.innerHTML = `<${tag}> ${this.name} </${tag}>`;
         }
@@ -17,9 +18,11 @@ function renderPerson(tag: string, selector: string) {
 
 @renderPerson('h1', 'div')
 class Person {
-  constructor(public name: string, public age: number) {
-    //
-  }
+  name: string = 'momin';
+
+  constructor() {}
 }
 
-const me = new Person('Momin', 18);
+const me = new Person();
+
+console.log(me);
