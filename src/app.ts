@@ -1,8 +1,10 @@
-function Logger(target: Function) {
-  console.log(target);
+function Logger() {
+  return function (target: Function) {
+    console.log(target);
+  };
 }
 
-@Logger
+@Logger()
 class Person {
   constructor(public name: string) {
     console.log('person created');
