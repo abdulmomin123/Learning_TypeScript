@@ -1,16 +1,12 @@
-function Logger(state: 'original' | 'extended') {
-  if (state === 'original') {
-    return function (target: Function) {
-      console.log(target);
-    };
-  } else {
-    return function (target: Function) {
-      console.log(`target fn here: ${target}`);
-    };
-  }
+function render(template: string, hookId: string) {
+  return function (constructor: Function) {
+    const target = document.querySelector(hookId)!;
+    target.innerHTML = template;
+    constructor;
+  };
 }
 
-@Logger('extended')
+@render('<p>hi</p>', 'div')
 class Person {
   constructor(public name: string) {
     console.log('person created');
