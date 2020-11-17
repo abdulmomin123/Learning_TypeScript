@@ -1,12 +1,13 @@
-function render(template: string, hookId: string) {
-  return function (constructor: Function) {
-    const target = document.querySelector(hookId)!;
-    target.innerHTML = template;
-    constructor;
-  };
+function foo(_: Function) {
+  console.log('foo');
 }
 
-@render('<p>hi</p>', 'div')
+function bar(_: Function) {
+  console.log('bar');
+}
+
+@foo
+@bar
 class Person {
   constructor(public name: string) {
     console.log('person created');
