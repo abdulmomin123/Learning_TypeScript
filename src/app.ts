@@ -1,19 +1,13 @@
-function foo(_: Function) {
-  console.log('foo');
-}
+class Product {
+  constructor(public title: string, private _price: number) {
+    //
+  }
 
-function bar(_: Function) {
-  console.log('bar');
-}
+  set price(val: number) {
+    if (val > 0) this._price = val;
+  }
 
-@foo
-@bar
-class Person {
-  constructor(public name: string) {
-    console.log('person created');
+  getPriceWithTax(tax: number) {
+    return this._price * (1 + tax);
   }
 }
-
-const me = new Person('momin');
-
-console.log(me);
