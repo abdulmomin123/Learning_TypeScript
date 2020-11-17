@@ -12,7 +12,18 @@ function accessorDecorator(
   console.log(propDescriptor);
 }
 
+function methodDecorator(
+  target: any,
+  prop: string | symbol,
+  propDescriptor: PropertyDescriptor
+) {
+  console.log(target);
+  console.log(prop);
+  console.log(propDescriptor);
+}
+
 class Product {
+  // @propertyDecorator
   title: string;
   private _price: number;
 
@@ -21,11 +32,12 @@ class Product {
     this._price = price;
   }
 
-  @accessorDecorator
+  // @accessorDecorator
   set price(val: number) {
     if (val > 0) this._price = val;
   }
 
+  // @methodDecorator
   getPriceWithTax(tax: number) {
     return this._price * (1 + tax);
   }
