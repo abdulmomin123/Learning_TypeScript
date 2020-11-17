@@ -1,10 +1,16 @@
-function Logger() {
-  return function (target: Function) {
-    console.log(target);
-  };
+function Logger(state: 'original' | 'extended') {
+  if (state === 'original') {
+    return function (target: Function) {
+      console.log(target);
+    };
+  } else {
+    return function (target: Function) {
+      console.log(`target fn here: ${target}`);
+    };
+  }
 }
 
-@Logger()
+@Logger('extended')
 class Person {
   constructor(public name: string) {
     console.log('person created');
