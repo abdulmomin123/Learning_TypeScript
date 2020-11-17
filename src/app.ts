@@ -22,6 +22,16 @@ function methodDecorator(
   console.log(propDescriptor);
 }
 
+function ParamDecorator(
+  target: any,
+  methodName: string | symbol,
+  paramPosition: number
+) {
+  console.log(target);
+  console.log(methodName);
+  console.log(paramPosition);
+}
+
 class Product {
   // @propertyDecorator
   title: string;
@@ -38,7 +48,7 @@ class Product {
   }
 
   // @methodDecorator
-  getPriceWithTax(tax: number) {
+  getPriceWithTax(/*@ParamDecorator*/ tax: number) {
     return this._price * (1 + tax);
   }
 }

@@ -12,6 +12,11 @@ function methodDecorator(target, prop, propDescriptor) {
     console.log(prop);
     console.log(propDescriptor);
 }
+function ParamDecorator(target, methodName, paramPosition) {
+    console.log(target);
+    console.log(methodName);
+    console.log(paramPosition);
+}
 class Product {
     constructor(title, price) {
         this.title = title;
