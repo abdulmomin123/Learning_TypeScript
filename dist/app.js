@@ -5,8 +5,13 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-function Log(_target, prop) {
-    console.log(_target, prop);
+function propertyDecorator(target, prop) {
+    console.log(target, prop);
+}
+function accessorDecorator(target, prop, propDescriptor) {
+    console.log(target);
+    console.log(prop);
+    console.log(propDescriptor);
 }
 class Product {
     constructor(title, price) {
@@ -22,7 +27,7 @@ class Product {
     }
 }
 __decorate([
-    Log
-], Product.prototype, "title", void 0);
+    accessorDecorator
+], Product.prototype, "price", null);
 const prod = new Product('phone', 1000);
 //# sourceMappingURL=app.js.map

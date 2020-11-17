@@ -1,9 +1,18 @@
-function Log(_target: any, prop: string | Symbol) {
-  console.log(_target, prop);
+function propertyDecorator(target: any, prop: string | Symbol) {
+  console.log(target, prop);
+}
+
+function accessorDecorator(
+  target: any,
+  prop: string | symbol,
+  propDescriptor: PropertyDescriptor
+) {
+  console.log(target);
+  console.log(prop);
+  console.log(propDescriptor);
 }
 
 class Product {
-  @Log
   title: string;
   private _price: number;
 
@@ -12,6 +21,7 @@ class Product {
     this._price = price;
   }
 
+  @accessorDecorator
   set price(val: number) {
     if (val > 0) this._price = val;
   }
