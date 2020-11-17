@@ -1,8 +1,9 @@
-function Log(prop: string) {
+function Log(_target: any, prop: string) {
   console.log(prop);
 }
 
 class Product {
+  @Log
   title: string;
   private _price: number;
 
@@ -19,3 +20,5 @@ class Product {
     return this._price * (1 + tax);
   }
 }
+
+const prod = new Product('phone', 1000);
