@@ -1,17 +1,14 @@
-interface Video {
-  title: string;
-  description: string;
-  publishDate: Date;
+function Logger(target: Function) {
+  console.log(target);
 }
 
-function planVideo(title: string, description: string, publishDate: Date) {
-  let videoBlueprint: Partial<Video> = {};
-
-  videoBlueprint.title = title;
-  videoBlueprint.description = description;
-  videoBlueprint.publishDate = publishDate;
-
-  return videoBlueprint;
+@Logger
+class Person {
+  constructor(public name: string) {
+    console.log('person created');
+  }
 }
 
-const couples: Readonly<string[]> = ['momin', 'mim'];
+const me = new Person('momin');
+
+console.log(me);
