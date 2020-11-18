@@ -30,5 +30,4 @@ __decorate([
 ], Printer.prototype, "showMessage", null);
 const test = new Printer();
 btn.addEventListener('click', test.showMessage);
-test.showMessage();
 //# sourceMappingURL=app.js.map

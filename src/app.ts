@@ -34,5 +34,3 @@ class Printer {
 const test = new Printer();
 
 btn.addEventListener('click', test.showMessage);
-
-test.showMessage();
