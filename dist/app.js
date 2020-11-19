@@ -41,9 +41,15 @@ class ProjectInput {
         const people = +this.peopleInput.value;
         return [title, description, people];
     }
+    clearInputs() {
+        this.titleInput.value = '';
+        this.descriptionInput.value = '';
+        this.peopleInput.value = '';
+    }
     submitHandler(e) {
         e.preventDefault();
         const userInputs = this.getUserInputs();
+        this.clearInputs();
         console.log(userInputs);
     }
 }

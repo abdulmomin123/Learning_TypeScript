@@ -64,11 +64,19 @@ class ProjectInput {
     return [title, description, people];
   }
 
+  private clearInputs() {
+    this.titleInput.value = '';
+    this.descriptionInput.value = '';
+    this.peopleInput.value = '';
+  }
+
   @autobind
   private submitHandler(e: Event) {
     e.preventDefault();
 
     const userInputs = this.getUserInputs();
+
+    this.clearInputs();
 
     console.log(userInputs);
   }
