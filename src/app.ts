@@ -62,6 +62,8 @@ function validate(validatableInput: Validatable) {
   if (validatableInput.max && typeof validatableInput.max === 'number') {
     isValid = isValid && validatableInput.max <= validatableInput.value;
   }
+
+  return isValid;
 }
 
 // main class

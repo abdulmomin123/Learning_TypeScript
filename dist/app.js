@@ -37,6 +37,7 @@ function validate(validatableInput) {
     if (validatableInput.max && typeof validatableInput.max === 'number') {
         isValid = isValid && validatableInput.max <= validatableInput.value;
     }
+    return isValid;
 }
 class ProjectInput {
     constructor() {
