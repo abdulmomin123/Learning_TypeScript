@@ -30,15 +30,27 @@ interface Validatable {
 function validate(validatableInput: Validatable) {
   let isValid = true;
 
+  // is required
   if (validatableInput.required) {
     isValid = isValid && validatableInput.value.toString().trim().length !== 0;
   }
+
+  // min length
   if (
     validatableInput.minLength &&
     typeof validatableInput.value === 'string'
   ) {
     isValid =
       isValid && validatableInput.value.length >= validatableInput.minLength;
+  }
+
+  // max length
+  if (
+    validatableInput.maxLength &&
+    typeof validatableInput.value === 'string'
+  ) {
+    isValid =
+      isValid && validatableInput.value.length <= validatableInput.maxLength;
   }
 }
 
