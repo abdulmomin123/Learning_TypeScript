@@ -110,6 +110,21 @@ class ProjectInput {
     const description = this.descriptionInput.value;
     const people = +this.peopleInput.value;
 
+    const titleValidatable: Validatable = {
+      value: title,
+      required: true,
+    };
+
+    const descriptionValidatable: Validatable = {
+      value: description,
+      required: true,
+    };
+
+    const peopleValidatable: Validatable = {
+      value: people,
+      required: true,
+    };
+
     return [title, description, people];
   }
 
