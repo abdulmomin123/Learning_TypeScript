@@ -30,10 +30,12 @@ class ProjectInput {
 
   private submitHandler(e: Event) {
     e.preventDefault();
+
+    console.log(this.titleInput.value);
   }
 
   private configure() {
-    this.element.addEventListener('submit', this.submitHandler);
+    this.element.addEventListener('submit', this.submitHandler.bind(this));
   }
 
   private attach() {
