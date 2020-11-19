@@ -31,10 +31,10 @@ function validate(validatableInput) {
         isValid =
             isValid && validatableInput.value.length <= validatableInput.maxLength;
     }
-    if (validatableInput.min && typeof validatableInput.min === 'number') {
+    if (validatableInput.min && typeof validatableInput.value === 'number') {
         isValid = isValid && validatableInput.min >= validatableInput.value;
     }
-    if (validatableInput.max && typeof validatableInput.max === 'number') {
+    if (validatableInput.max && typeof validatableInput.value === 'number') {
         isValid = isValid && validatableInput.max <= validatableInput.value;
     }
     return isValid;
@@ -80,21 +80,14 @@ class ProjectInput {
         if (!validate(titleValidatable) ||
             !validate(descriptionValidatable) ||
             !validate(peopleValidatable)) {
-            alert('Invalid input, please try again!');
             return;
         }
         else
             return [title, description, people];
     }
-    clearInputs() {
-        this.titleInput.value = '';
-        this.descriptionInput.value = '';
-        this.peopleInput.value = '';
-    }
     submitHandler(e) {
         e.preventDefault();
         const userInputs = this.getUserInputs();
-        this.clearInputs();
         console.log(userInputs);
     }
 }

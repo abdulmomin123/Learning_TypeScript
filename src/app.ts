@@ -54,12 +54,12 @@ function validate(validatableInput: Validatable) {
   }
 
   // min value
-  if (validatableInput.min && typeof validatableInput.min === 'number') {
+  if (validatableInput.min && typeof validatableInput.value === 'number') {
     isValid = isValid && validatableInput.min >= validatableInput.value;
   }
 
   // max value
-  if (validatableInput.max && typeof validatableInput.max === 'number') {
+  if (validatableInput.max && typeof validatableInput.value === 'number') {
     isValid = isValid && validatableInput.max <= validatableInput.value;
   }
 
@@ -133,16 +133,17 @@ class ProjectInput {
       !validate(descriptionValidatable) ||
       !validate(peopleValidatable)
     ) {
-      alert('Invalid input, please try again!');
+      // console.log(validate(peopleValidatable));
+      // alert('Invalid input, please try again!');
       return;
     } else return [title, description, people];
   }
 
-  private clearInputs() {
-    this.titleInput.value = '';
-    this.descriptionInput.value = '';
-    this.peopleInput.value = '';
-  }
+  // private clearInputs() {
+  //   this.titleInput.value = '';
+  //   this.descriptionInput.value = '';
+  //   this.peopleInput.value = '';
+  // }
 
   @autobind
   private submitHandler(e: Event) {
@@ -150,7 +151,7 @@ class ProjectInput {
 
     const userInputs = this.getUserInputs();
 
-    this.clearInputs();
+    // this.clearInputs();
 
     console.log(userInputs);
   }
