@@ -17,6 +17,20 @@ function autobind(
   return modifiedMethod;
 }
 
+// validation fn
+interface Validatable {
+  value: string | number;
+  required?: boolean;
+  minLength?: number;
+  maxLength?: number;
+  max?: number;
+  min?: number;
+}
+
+function validate(validatableInput: Validatable) {
+  let isValid = true;
+}
+
 // main class
 class ProjectInput {
   template: HTMLTemplateElement;

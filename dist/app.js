@@ -16,6 +16,8 @@ function autobind(_target, _methodName, descriptor) {
     };
     return modifiedMethod;
 }
+function validate() {
+}
 class ProjectInput {
     constructor() {
         this.template = document.getElementById('project-input');
