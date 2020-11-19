@@ -31,6 +31,12 @@ function validate(validatableInput) {
         isValid =
             isValid && validatableInput.value.length <= validatableInput.maxLength;
     }
+    if (validatableInput.min && typeof validatableInput.min === 'number') {
+        isValid = isValid && validatableInput.min >= validatableInput.value;
+    }
+    if (validatableInput.max && typeof validatableInput.max === 'number') {
+        isValid = isValid && validatableInput.max <= validatableInput.value;
+    }
 }
 class ProjectInput {
     constructor() {
