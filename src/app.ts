@@ -118,14 +118,23 @@ class ProjectInput {
     const descriptionValidatable: Validatable = {
       value: description,
       required: true,
+      minLength: 5,
     };
 
     const peopleValidatable: Validatable = {
       value: people,
       required: true,
+      min: 1,
+      max: 5,
     };
 
-    return [title, description, people];
+    if (
+      !validate(titleValidatable) &&
+      !validate(descriptionValidatable) &&
+      !validate(peopleValidatable)
+    )
+      alert('Invalid input, please try again!');
+    else return [title, description, people];
   }
 
   private clearInputs() {
