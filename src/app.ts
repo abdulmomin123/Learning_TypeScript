@@ -29,6 +29,10 @@ interface Validatable {
 
 function validate(validatableInput: Validatable) {
   let isValid = true;
+
+  if (validatableInput.required) {
+    isValid = isValid && validatableInput.value.toString().trim().length !== 0;
+  }
 }
 
 // main class

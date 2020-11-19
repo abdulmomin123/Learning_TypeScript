@@ -16,7 +16,11 @@ function autobind(_target, _methodName, descriptor) {
     };
     return modifiedMethod;
 }
-function validate() {
+function validate(validatableInput) {
+    let isValid = true;
+    if (validatableInput.required) {
+        isValid = isValid && validatableInput.value.toString().trim().length !== 0;
+    }
 }
 class ProjectInput {
     constructor() {
