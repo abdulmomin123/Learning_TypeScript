@@ -105,7 +105,7 @@ class ProjectInput {
     this.host.insertAdjacentElement('afterbegin', this.element);
   }
 
-  private getUserInputs(): [string, string, number] {
+  private getUserInputs(): [string, string, number] | void {
     const title = this.titleInput.value;
     const description = this.descriptionInput.value;
     const people = +this.peopleInput.value;
@@ -129,12 +129,13 @@ class ProjectInput {
     };
 
     if (
-      !validate(titleValidatable) &&
-      !validate(descriptionValidatable) &&
+      !validate(titleValidatable) ||
+      !validate(descriptionValidatable) ||
       !validate(peopleValidatable)
-    )
+    ) {
       alert('Invalid input, please try again!');
-    else return [title, description, people];
+      return;
+    } else return [title, description, people];
   }
 
   private clearInputs() {
