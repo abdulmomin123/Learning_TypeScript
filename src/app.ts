@@ -1,3 +1,12 @@
+// autobind decorator
+function autobind(
+  target: any,
+  methodName: string,
+  descriptor: PropertyDescriptor
+) {
+  //
+}
+
 class ProjectInput {
   template: HTMLTemplateElement;
   host: HTMLDivElement;
