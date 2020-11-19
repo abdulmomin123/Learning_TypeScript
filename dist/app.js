@@ -9,7 +9,14 @@ class ProjectInput {
         this.titleInput = this.element.querySelector('#title');
         this.descriptionInput = this.element.querySelector('#description');
         this.peopleInput = this.element.querySelector('#people');
+        this.configure();
         this.attach();
+    }
+    submitHandler(e) {
+        e.preventDefault();
+    }
+    configure() {
+        this.element.addEventListener('submit', this.submitHandler);
     }
     attach() {
         this.host.insertAdjacentElement('afterbegin', this.element);

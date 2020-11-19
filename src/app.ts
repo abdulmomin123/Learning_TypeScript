@@ -24,7 +24,16 @@ class ProjectInput {
       '#people'
     ) as HTMLInputElement;
 
+    this.configure();
     this.attach();
+  }
+
+  private submitHandler(e: Event) {
+    e.preventDefault();
+  }
+
+  private configure() {
+    this.element.addEventListener('submit', this.submitHandler);
   }
 
   private attach() {
