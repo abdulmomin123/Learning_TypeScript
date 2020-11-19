@@ -17,6 +17,7 @@ function autobind(
   return modifiedMethod;
 }
 
+// main class
 class ProjectInput {
   template: HTMLTemplateElement;
   host: HTMLDivElement;
@@ -47,19 +48,29 @@ class ProjectInput {
     this.attach();
   }
 
-  @autobind
-  private submitHandler(e: Event) {
-    e.preventDefault();
-
-    console.log(this.titleInput.value);
-  }
-
   private configure() {
     this.element.addEventListener('submit', this.submitHandler);
   }
 
   private attach() {
     this.host.insertAdjacentElement('afterbegin', this.element);
+  }
+
+  private getUserInputs(): [string, string, number] {
+    const title = this.titleInput.value;
+    const description = this.descriptionInput.value;
+    const people = +this.peopleInput.value;
+
+    return [title, description, people];
+  }
+
+  @autobind
+  private submitHandler(e: Event) {
+    e.preventDefault();
+
+    const userInputs = this.getUserInputs();
+
+    console.log(userInputs);
   }
 }
 

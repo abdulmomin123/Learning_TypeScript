@@ -29,15 +29,22 @@ class ProjectInput {
         this.configure();
         this.attach();
     }
-    submitHandler(e) {
-        e.preventDefault();
-        console.log(this.titleInput.value);
-    }
     configure() {
         this.element.addEventListener('submit', this.submitHandler);
     }
     attach() {
         this.host.insertAdjacentElement('afterbegin', this.element);
+    }
+    getUserInputs() {
+        const title = this.titleInput.value;
+        const description = this.descriptionInput.value;
+        const people = +this.peopleInput.value;
+        return [title, description, people];
+    }
+    submitHandler(e) {
+        e.preventDefault();
+        const userInputs = this.getUserInputs();
+        console.log(userInputs);
     }
 }
 __decorate([
